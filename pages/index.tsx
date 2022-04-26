@@ -12,10 +12,11 @@ interface Props {
 
 const Home= ({collections} :Props) => {
   return (
-    <div className='max-w-7xl mx-auto flex flex-col min-h-screen md:py-20 md:px-20 2xl:px-0'>
+    <div className=' flex flex-col max-w-7xl mx-auto min-h-screen md:py-20 md:px-20 2xl:px-0'>
       <Head>
         <title>NFT Drop</title>
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       <h1 className='mb-10 text-4xl font-extralight'> 

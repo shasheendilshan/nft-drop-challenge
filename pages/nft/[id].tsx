@@ -15,14 +15,14 @@ const NFTDropPage = ({collection}:Props) => {
 
 //Auth
 
-const connectWithMetamask =  useMetamask();
-const address = useAddress();
-const disconnect = useDisconnect();
+// const connectWithMetamask =  useMetamask();
+// const address = useAddress();
+// const disconnect = useDisconnect();
 
 //--
 
   return (
-    <div className='flex h-screen flex-col lg:grid lg:grid-cols-10 '>
+    <div className='flex min-h-screen flex-col lg:grid lg:grid-cols-10 '>
         {/* Left Side */}
         <div className='bg-gradient-to-br from-cyan-800 to-rose-500 lg:col-span-4 '>
            <div className='flex flex-col items-center justify-center py-2
@@ -58,18 +58,20 @@ const disconnect = useDisconnect();
                   NFT Market Place</h1>
                   </Link>
                 <button className='rounded-full bg-rose-400 text-white px-4 py-2 font-bold lg:px-5 lg:py-3 lg:text-base'
-                onClick={()=> address? disconnect() :connectWithMetamask()}
+                // onClick={()=> address? disconnect() :connectWithMetamask()}
                 >
                   
-                    {address?'Sign Out':'Sign In'}
+                    {/* {address?'Sign Out':'Sign In'} */}
+
+                    Sign in
                     
                     </button>
             </header>
 
             <hr  className='my-2 border'/>
-             {address &&(
+             {/* {address &&(
                  <p className='text-center text-sm text-red-400'>You're logged in with wallet {address.substring(0,5)}...{address.substring(address.length-5)}</p>
-             )}
+             )} */}
             {/* Content */}
             
             <div className='mt-10 flex flex-col flex-1 items-center space-y-6 text-center lg:space-y-0 lg:justify-center'>
@@ -82,10 +84,10 @@ const disconnect = useDisconnect();
                 </p>
             </div>
             {/* Mint button */}
-
-            <button className='rounded-full bg-red-600 h-16 w-full text-white mt-5 font-bold'>
-                Mint NFT (0.01 ETH)
-            </button>
+             <button className='rounded-full bg-red-600 h-16 w-full text-white mt-5 font-bold'>
+             Mint NFT (0.01 ETH)
+             </button>
+           
         </div>
     </div>
   )
