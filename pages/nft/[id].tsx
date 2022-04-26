@@ -21,8 +21,6 @@ const disconnect = useDisconnect();
 
 //--
 
-console.log(address)
-
   return (
     <div className='flex h-screen flex-col lg:grid lg:grid-cols-10 '>
         {/* Left Side */}
